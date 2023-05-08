@@ -36,11 +36,10 @@ contract GuessTheNewNumberExploit {
     // Fallback function to receive Ether
     function() public payable {}
 }
+```
 
 ## Takeaways
 
 - Don't use public data for secret values in contracts.
 - Be aware that attackers can deploy contracts to exploit vulnerabilities.
 - Ensure security through audits and testing.
-
-```
