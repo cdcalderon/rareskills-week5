@@ -30,6 +30,7 @@ contract ShopAttack {
         return ORIGINAL_PRICE;
     }
 }
+```
 
 **Takeaways:**
 
@@ -40,4 +41,3 @@ contract ShopAttack {
 
 1. Implement the `price()` function within the Buyer interface.
 2. Store the result of the first external function call in a variable and use that for further operations.
-```
