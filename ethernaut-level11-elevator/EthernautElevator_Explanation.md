@@ -15,11 +15,11 @@ if (! building.isLastFloor(_floor)) {
 
 An attacker can make a harmful contract using the Building interface and tamper with the isLastFloor function to take advantage of the Elevator contract. This occurs because the Elevator contract doesn't set restrictions on how isLastFloor is implemented.
 
+```solidity
 contract ElevatorHack {
 Elevator private immutable target;
 uint private countCalls;
 
-```solidity
     constructor(address _target) {
         target = Elevator(_target);
     }
